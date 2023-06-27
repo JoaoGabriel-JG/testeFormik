@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "formik-yup": "^0.0.5"
+  }
+}
