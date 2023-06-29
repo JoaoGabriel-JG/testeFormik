@@ -1,47 +1,47 @@
-import React from 'react';
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
+import React from 'react'
+import *  as Yup from 'yup'
+import { Formik, Form, Field } from 'formik'
 
-const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .required('Required'),
-  lastName: Yup.string()
-    .required('Required'),
-  email: Yup.string()
-    .email('Invalid email')
-    .required('Required'),
-});
+const dadosVazios = [{
+  nome: '',
+  sobrenome: '',
+  email: ''
+}]
 
-export const ValidationSchemaExample = () => (
-  <div>
-    <h1>Signup</h1>
+const validaEFunciona = Yup.object().shape({
+  dadosVazios: Yup.array().of(
+    Yup.object().shape({
+      nome: Yup.string().required('Required'),
+      sobrenome: Yup.string().required('Required'),
+      email: Yup.string().email('Email inválido').required('Required')
+    })
+  )
+})
+
+export const exemploFuncionaPorfavor = () => (
+  <>
+    <h1>Funciona por favor</h1>
     <Formik
-      initialValues={{
-        firstName: '',
-        lastName: '',
-        email: '',
+      initialValues = {{
+        dadosVazios
       }}
-      validationSchema={SignupSchema}
-      onSubmit={values => {
-        // same shape as initial values
-        console.log(values);
+      validationSchema={validaEFunciona}
+      onSubmit = { values => {
+        console.log(values)
       }}
     >
       {({ errors, touched }) => (
         <Form>
-          <Field name="firstName" />
-          {errors.firstName && touched.firstName ? (
-            <div>{errors.firstName}</div>
-          ) : null}
-          <Field name="lastName" />
-          {errors.lastName && touched.lastName ? (
-            <div>{errors.lastName}</div>
-          ) : null}
-          <Field name="email" type="email" />
-          {errors.email && touched.email ? <div>{errors.email}</div> : null}
-          <button type="submit">Submit</button>
+          <Field name='nome' />
+          { touched.nome && errors.nome && <div>{ errors.name }</div> }
+          <Field name='sobrenome' />
+          { touched.sobrenome && errors.sobrenome && <div>{ errors.sobrenome }</div> }
+          <Field name='email' />
+          { touched.email && errors.email && <div>{ errors.email }</div> }
+
+          <button type='submit'>Funciona</button>
         </Form>
       )}
-    </Formik>
-  </div>
-);
+      </Formik>
+  </>
+)

@@ -1,10 +1,11 @@
+import React from 'react'
 import './App.css';
-import { ValidationSchemaExample } from '../src/components';
+import { exemploFuncionaPorfavor } from '../src/components/index';
 
 function App() {
   return (
     <div className="App">
-      <ValidationSchemaExample/>
+      <exemploFuncionaPorfavor />
     </div>
   );
 }
