@@ -18,7 +18,7 @@ const validaEFunciona = Yup.object().shape({
   )
 })
 
-export const exemploFuncionaPorfavor = () => (
+export const aaa = () => (
   <>
     <h1>Funciona por favor</h1>
     <Formik

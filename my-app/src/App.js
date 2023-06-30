@@ -1,13 +1,11 @@
 import React from 'react'
 import './App.css';
-import { exemploFuncionaPorfavor } from '../src/components/index';
+import { aaa } from '../src/components/index';
 
 function App() {
   return (
-    <div className="App">
-      <exemploFuncionaPorfavor />
-    </div>
+    <>
+      <aaa />
+    </>
   );
 }
-
-export default App;
