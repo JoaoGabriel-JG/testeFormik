@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Input } from '../input/index'
 
 const initialValues = {
   dadosVazios: [{
@@ -19,7 +18,7 @@ const validaEFunciona = Yup.object().shape({
       email: Yup.string().email('Invalid email').required('Required')
     })
   )
-}); 
+});
 
 export const Funciona = () => (
   <>

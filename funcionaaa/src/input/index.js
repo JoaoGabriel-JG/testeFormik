@@ -6,7 +6,8 @@ const Input = ({
     touched,
     errors,
     customHandleOnChange,
-    className
+    className,
+    name
 }) => {
     let error = ''
     let nameSeparate = name.split('.')
