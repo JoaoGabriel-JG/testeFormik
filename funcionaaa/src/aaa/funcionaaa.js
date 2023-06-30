@@ -20,14 +20,6 @@ const validaEFunciona = Yup.object().shape({
   )
 });
 
-// validaEFunciona.validateAt('data', initialValues)
-//     .then(() => {
-//         console.log('deu certooooooooo')
-//     })
-//     .catch((error) => {
-//         console.log('Deu ruim')
-//     })
-
 export const Funciona = () => (
   <>
     <h1>Funciona por favor</h1>
