@@ -32,16 +32,16 @@ export const Funciona = () => (
     >
       {({ errors, touched }) => (
         <Form>
-          <Field name='dadosVazios[0].nome' />
-          <ErrorMessage name='dadosVazios[0].nome' component='div' />
+                <Field name='dadosVazios[0].nome' />
+                <ErrorMessage name='dadosVazios[0].nome' component='div' />
 
-          <Field name='dadosVazios[0].sobrenome' />
-          <ErrorMessage name='dadosVazios[0].sobrenome' component='div' />
+                <Field name='dadosVazios[0].sobrenome' />
+                <ErrorMessage name='dadosVazios[0].sobrenome' component='div' />
 
-          <Field name='dadosVazios[0].email' />
-          <ErrorMessage name='dadosVazios[0].email' component='div' />
+                <Field name='dadosVazios[0].email' />
+                <ErrorMessage name='dadosVazios[0].email' component='div' />
 
-          <button type='submit'>Funciona</button>
+                <button type='submit'>Funciona</button>      
         </Form>
       )}
     </Formik>
