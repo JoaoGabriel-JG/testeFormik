@@ -18,7 +18,7 @@ const validaEFunciona = Yup.object().shape({
       email: Yup.string().email('Invalid email').required('Required')
     })
   )
-});
+}); 
 
 export const Funciona = () => (
   <>
